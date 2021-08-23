@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import { dummy } from "./dummy";
+import { github } from "./github";
 
 // eslint-disable-next-line
 export default () =>
   combineReducers({
-    dummy,
+    github,
   });
