@@ -9,6 +9,18 @@ function PullRequestTable() {
         <div className="flex flex-col w-11/12">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full sm:px-2 lg:px-8">
+              <h1 className="text-center text-3xl font-bold mb-5">
+                Pull requests for{" "}
+                <a
+                  href="/"
+                  className="text-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Neovim
+                </a>{" "}
+                project
+              </h1>
               <div className="shadow overflow-hidden border-b border-gray-200">
                 <div
                   id="pr-table"

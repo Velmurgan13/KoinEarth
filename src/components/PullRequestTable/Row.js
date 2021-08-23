@@ -1,6 +1,7 @@
 import React from "react";
-import Label from "../Label";
 import moment from "moment";
+import Label from "./Label";
+import UserCard from "./UserCard";
 
 function Row(props) {
   const { pullRequest } = props;
@@ -8,7 +9,7 @@ function Row(props) {
     <>
       <div
         key={pullRequest.id}
-        className="flex flex-row w-full border hover:border-gray-500 hover:bg-gray-100"
+        className="flex flex-row w-full border hover:border-gray-200 hover:bg-gray-50"
       >
         <div className="px-2 py-4 flex-col w-6/12">
           <div className="flex flex-row items-center justify-items-center break-words w-full">
@@ -45,9 +46,9 @@ function Row(props) {
           {pullRequest.head.ref}
         </div>
         <div className="px-2 py-4 w-2/12 flex flex-col items-center justify-center">
-          <a href={pullRequest.html_url} target="_blank" rel="noreferrer">
-            {pullRequest.requested_reviewers.map((e) => e.login).join(", ")}
-          </a>
+          {pullRequest.requested_reviewers.map((user) => (
+            <UserCard user={user} />
+          ))}
         </div>
       </div>
     </>

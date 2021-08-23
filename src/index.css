@@ -21,7 +21,3 @@ code {
 a.bg-white {
   @apply hover:text-gray-500;
 }
-
-tr {
-  @apply hover:bg-gray-50;
-}
